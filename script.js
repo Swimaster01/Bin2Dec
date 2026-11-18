@@ -1,12 +1,25 @@
 const binaryInput = document.getElementById('binaryInput');
 
+const convertBtn = document.getElementById('convertBtn');
+
 const result = document.getElementById('result');
 
-binaryInput.addEventListener('input',function() {
+convertBtn.addEventListener("click", function(){
     
-    const decimal = parseInt(binaryInput.value, 2);
+    const digits = binaryInput.value.split('');
 
-    console.log(decimal);
-    
-})
+    const isBinary = digits.every(function(digit){
+        return digit === '0' || digit === '1';
+    });
+
+    if (isBinary) {
+        result.textContent = binaryInput.value;
+    } else {
+        result.textContent = 'Invalid binary number';
+    }
+
+
+}) 
+
+
 
