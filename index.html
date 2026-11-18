@@ -6,16 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="h-[50vh] flex flex-col justify-center items-center">
      
-    <h1>Binary to Decimal Converter</h1>
+    <h1 class="font-bold text-4xl">Binary to Decimal Converter</h1>
 
-    <input type="text" id="binaryInput" placeholder="Enter binary number">
+    <input type="text" id="binaryInput" maxlength="32" placeholder="Enter binary number" class="w-62.5 h-12.5 m-10 px-4 border border-gray-400 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
 
-    <button id="convertBtn">Convert</button>
+    <button id="convertBtn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">Convert</button>
 
     <p id="result">Result will appear here</p>
 
-    <script src="/script.js"></script>
+    <script type="module" src="/script.js"></script>
 </body>
 </html>
